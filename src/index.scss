@@ -1,3 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('assets/fonts/proximanova-light.eot');
+  src: local('☺'), url('assets/fonts/proximanova-light.woff') format('woff'), url('assets/fonts/proximanova-light.ttf') format('truetype'), url('assets/fonts/proximanova-light.svg') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('assets/fonts/proximanova-regular.eot');
+  src: local('☺'), url('assets/fonts/proximanova-regular.woff') format('woff'), url('assets/fonts/proximanova-regular.ttf') format('truetype'), url('assets/fonts/proximanova-regular.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('assets/fonts/proximanova-bold.eot');
+  src: local('☺'), url('assets/fonts/proximanova-bold.woff') format('woff'), url('assets/fonts/proximanova-bold.ttf') format('truetype'), url('assets/fonts/proximanova-bold.svg') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NautilusPompilius';
+  src: url('assets/fonts/Nautilus.eot');
+  src: local('☺'), url('assets/fonts/Nautilus.woff') format('woff'), url('assets/fonts/Nautilus.ttf') format('truetype'), url('assets/fonts/Nautilus.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 // nullified styles
 * {
   padding: 0;

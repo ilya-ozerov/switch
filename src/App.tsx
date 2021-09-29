@@ -1,43 +1,12 @@
 import React from 'react';
 import './App.scss';
+import {Home} from "./components/Home/Home";
 
-export const App = () => {
+export const App: React.FC = () => {
     return (
         <div className='wrapper'>
-            <section className='home'>
-                <header className="header">
-                    <div className="header__menu">
-                        <ul className="header__list">
-                            <li>Home</li>
-                            <li>What we do?</li>
-                            <li>Testimonial</li>
-                            <li>Contact Us</li>
-                        </ul>
-                    </div>
-                    {/*font Nautilus Pompilius*/}
-                    <div className="header__logo">Switch</div>
 
-                    <div className="header__input">
-                        <input type="text" placeholder='Search...'/>
-                    </div>
-                </header>
-
-                <div className="home__body">
-
-                    <div className="home__title">
-                        <h1>Art is Eternal Happiness</h1>
-                    </div>
-
-                    <div className="home__button">
-                        <button>WORK WITH US</button>
-                    </div>
-                </div>
-
-                <div className="home__scroll">
-                    <button>scroll down</button>
-                </div>
-
-            </section>
+            <Home />
 
             <section className="what">
                 <div className="what__title title">
