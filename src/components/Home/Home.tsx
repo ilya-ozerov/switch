@@ -1,6 +1,6 @@
 import React from 'react';
 import './home.scss';
-import bg from "./../../assets/images/background.png";
+import bg from "../../assets/images/home/background.png";
 
 export const Home: React.FC = () => {
     return (

@@ -1,0 +1,9 @@
+.socials {
+  display: grid;
+  gap: 6px;
+  grid-auto-flow: column;
+  background-color: #C5E9C5;
+  padding: 5px;
+  border-radius: 15px;
+  &__item {}
+}

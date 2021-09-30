@@ -1,9 +1,8 @@
 .home {
-  //display: flex;
-  //flex-direction: column;
   position: relative;
 
   &__content {
+    padding: 10px;
     position: relative;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 2;
@@ -49,8 +48,15 @@
       font-family: ProximaNova;
       color: #FFFFFF;
       text-transform: uppercase;
+
+      //width: 200px;
+      //height: 50px;
+      //line-height: 50px;
+      //font-size: 16px;
+
       font-size: 26px;
       padding: 16px 27px;
+
       background-color: #54D154;
       border-radius: 40px;
     }
@@ -65,12 +71,11 @@
     border-radius: 15px;
     margin-bottom: 11px;
     background-color: rgba(#FFFFFF, 0.7);
-    //text-align: center;
     padding: 7px 11px;
-    //line-height: 30px;
     color: #000000;
     position: relative;
     cursor: pointer;
+    user-select: none;
 
     div {
       &:after {
@@ -80,7 +85,7 @@
         height: 11px;
         top: 10px;
         right: 12px;
-        background: url("../../assets/images/arrow_down.svg") center no-repeat;
+        background: url("../../assets/images/home/arrow_down.svg") center no-repeat;
       }
     }
   }
@@ -89,14 +94,11 @@
 .header {
   display: flex;
   width: 100%;
-  //background-color: #828181;
-
   align-items: center;
-  padding: 10px 30px;
+  //padding: 10px 30px;
 
 
   &__menu {
-    //background-color: aquamarine;
     flex: 1 1 auto;
   }
   &__list {
@@ -132,14 +134,12 @@
     }
   }
   &__logo {
-    //flex: 1 1 auto;
-    //text-align: center;
-    //background-color: bisque;
     position: absolute;
     left: calc(50% - 30px);
 
     font-size: 24px;
     font-family: NautilusPompilius;
+    user-select: none;
 
   }
   &__input {

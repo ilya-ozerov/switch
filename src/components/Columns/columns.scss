@@ -1,0 +1,68 @@
+.columns {
+  padding: 40px;
+  width: 100%;
+
+  background-color: #333333;
+
+  &__body {
+    display: flex;
+    justify-items: center;
+    margin: 0px -45px;
+
+
+    //display: grid;
+    //gap: 50px;
+    //justify-items: center;
+
+    //grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+    //background-color: #828181;
+  }
+  &__about {
+    flex: 1 1 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 0px 45px;
+  }
+
+  &__posts {
+    flex: 1 1 33%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 0px 45px;
+  }
+
+  &__contact {
+    flex: 1 1 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 45px;
+
+  }
+
+  &__title {
+    margin-bottom: 24px;
+  }
+  &__text {
+    margin-bottom: 24px;
+    //max-width: 330px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 150%;
+    color: #CCCCCC;
+  }
+
+  &__items {}
+
+  &__contacts {}
+  &__address {}
+  &__email {}
+  &__phone {}
+  &__fax {}
+}
