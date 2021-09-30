@@ -1,0 +1,74 @@
+.clients {
+  background-color: #F2F1F1;
+  min-height: 50vh;
+  padding: 40px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__subtitle {
+    margin-bottom: 20px;
+  }
+
+  &__items {
+    flex: 1 1 auto;
+    width: 80%;
+
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    //background-color: #828181;
+    gap: 50px;
+
+    margin-bottom: 20px;
+  }
+
+  &__button {
+    background-color: #DDDCDC;
+    width: 200px;
+    height: 50px;
+    font-size: 18px;
+    font-family: ProximaNova;
+    color: #A59D9D;
+    border-radius: 25px;
+    //text-align: center;
+    padding-left: 30px;
+    line-height: 50px;
+    position: relative;
+    cursor: pointer;
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 15px;
+      height: 11px;
+      top: 18px;
+      right: 25px;
+      background: url("../../assets/images/clients/button_shape.svg") center no-repeat;
+    }
+  }
+}
+
+.client {
+  //background-color: #54D154;
+  display: flex;
+  justify-content: center;
+
+
+  &__image {
+    height: 70px;
+    display: flex;
+    align-items: center;
+
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
