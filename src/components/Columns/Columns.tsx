@@ -1,6 +1,13 @@
 import React from 'react';
 import './columns.scss';
 import {Socials} from "../common/Socials/Socials";
+import {Label} from "./Label/Label";
+
+import postImage1 from '../../assets/images/columns/post_image_1.png';
+import postImage2 from '../../assets/images/columns/post_image_2.png';
+import postImage3 from '../../assets/images/columns/post_image_3.png';
+import postImage4 from '../../assets/images/columns/post_image_4.png';
+import postImage5 from '../../assets/images/columns/post_image_5.png';
 
 export const Columns: React.FC = () => {
     return (
@@ -18,7 +25,7 @@ export const Columns: React.FC = () => {
                         lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis
                         sed odio sit amet nibh vulputate cursus.
                     </div>
-                    <Socials />
+                    <Socials style={ {backgroundColor: 'columns__socials'} }/>
                 </div>
 
                 <div className="columns__posts">
@@ -27,57 +34,58 @@ export const Columns: React.FC = () => {
                         <h2>RECENT POSTS</h2>
                     </div>
 
-                    <div className="columns__items">
-                        <div className="post">
-                            <div className="post__image">
-                                <img src="#" alt="post image"/>
+                    <ul className="columns__list list">
+                        <li>
+                            <div className="list__image">
+                                <img src={postImage1} alt="post"/>
                             </div>
-                            <div className="post__body">
-                                <div className="post__title">Lorem Ipsum Dolor Sit Amet.</div>
-                                <div className="post__label">MAGAZINE</div>
+                            <div className="list__body">
+                                <div className="list__title">Lorem Ipsum Dolor Sit Amet.</div>
+                                <Label name='magazine' color='#54D154' />
                             </div>
-                        </div>
+                        </li>
 
-                        <div className="post">
-                            <div className="post__image">
-                                <img src="#" alt="post image"/>
+                        <li>
+                            <div className="list__image">
+                                <img src={postImage2} alt="post"/>
                             </div>
-                            <div className="post__body">
-                                <div className="post__title">Lorem Ipsum Dolor Sit Amet.</div>
-                                <div className="post__label">UI DESIGN</div>
+                            <div className="list__body">
+                                <div className="list__title">Lorem Ipsum Dolor Sit Amet.</div>
+                                <Label name='ui design' color='#FFBA00' />
                             </div>
-                        </div>
+                        </li>
 
-                        <div className="post">
-                            <div className="post__image">
-                                <img src="#" alt="post image"/>
+                        <li>
+                            <div className="list__image">
+                                <img src={postImage3} alt="post"/>
                             </div>
-                            <div className="post__body">
-                                <div className="post__title">Lorem Ipsum Dolor Sit Amet.</div>
-                                <div className="post__label">PHOTOGRAPHY</div>
+                            <div className="list__body">
+                                <div className="list__title">Lorem Ipsum Dolor Sit Amet.</div>
+                                <Label name='photography' color='#089DEA' />
                             </div>
-                        </div>
+                        </li>
 
-                        <div className="post">
-                            <div className="post__image">
-                                <img src="#" alt="post image"/>
+                        <li>
+                            <div className="list__image">
+                                <img src={postImage4} alt="post"/>
                             </div>
-                            <div className="post__body">
-                                <div className="post__title">Lorem Ipsum Dolor Sit Amet.</div>
-                                <div className="post__label">BOOK</div>
+                            <div className="list__body">
+                                <div className="list__title">Lorem Ipsum Dolor Sit Amet.</div>
+                                <Label name='book' color='#F34D04' />
                             </div>
-                        </div>
+                        </li>
 
-                        <div className="post">
-                            <div className="post__image">
-                                <img src="#" alt="post image"/>
+                        <li>
+                            <div className="list__image">
+                                <img src={postImage5} alt="post"/>
                             </div>
-                            <div className="post__body">
-                                <div className="post__title">Lorem Ipsum Dolor Sit Amet.</div>
-                                <div className="post__label">UI DESIGN</div>
+                            <div className="list__body">
+                                <div className="list__title">Lorem Ipsum Dolor Sit Amet.</div>
+                                <Label name='ui design' color='#FFBA00' />
                             </div>
-                        </div>
-                    </div>
+                        </li>
+
+                    </ul>
                 </div>
 
                 <div className="columns__contact">
@@ -87,8 +95,10 @@ export const Columns: React.FC = () => {
                     </div>
 
                     <div className="columns__contacts">
-                        <div className="columns__address">10044 West 23th Street, Suite 721
-                            New York NY 10010</div>
+                        <div className="columns__address">
+                            <p>10044 West 23th Street, Suite 721</p>
+                            <p>New York NY 10010</p>
+                        </div>
                         <div className="columns__email">Email: Username@email.com</div>
                         <div className="columns__phone">Phone: +1 (0) 123 4567 890</div>
                         <div className="columns__fax">Fax: +1 (0) 321 4567 890</div>
