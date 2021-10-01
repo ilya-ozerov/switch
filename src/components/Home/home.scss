@@ -40,6 +40,10 @@
       text-align: center;
       font-weight: 700;
       font-size: 55pt;
+
+      @media (max-width: 767px) {
+        font-size: 30px;
+      }
     }
   }
 
@@ -49,13 +53,13 @@
       color: #FFFFFF;
       text-transform: uppercase;
 
-      //width: 200px;
-      //height: 50px;
-      //line-height: 50px;
-      //font-size: 16px;
+      width: 200px;
+      height: 50px;
+      line-height: 50px;
+      font-size: 16px;
 
-      font-size: 26px;
-      padding: 16px 27px;
+      //font-size: 26px;
+      //padding: 16px 27px;
 
       background-color: #54D154;
       border-radius: 40px;
@@ -95,11 +99,16 @@
   display: flex;
   width: 100%;
   align-items: center;
-  //padding: 10px 30px;
+  //padding: 10px 20px;
+  padding: 20px 10px;
 
 
   &__menu {
     flex: 1 1 auto;
+
+    @media (max-width: 767px) {
+      display: none;
+    }
   }
   &__list {
     display: flex;
@@ -148,6 +157,11 @@
     overflow: hidden;
     width: 180px;
     height: 30px;
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+
     input {
       font-size: 16px;
       font-family: ProximaNova;

@@ -7,9 +7,6 @@ import img3 from '../../assets/images/team/3.webp';
 import img4 from '../../assets/images/team/4.webp';
 import img5 from '../../assets/images/team/5.webp';
 
-import soc1 from '../../assets/images/socials/1.svg';
-import soc2 from '../../assets/images/socials/2.svg';
-import soc3 from '../../assets/images/socials/3.svg';
 import {Socials} from "../common/Socials/Socials";
 
 export const Team: React.FC = () => {
@@ -25,7 +22,7 @@ export const Team: React.FC = () => {
             <div className="team__members">
                 <div className="member">
                     <div className="member__image">
-                        <img src={img1} alt="member image"/>
+                        <img src={img1} alt="member of our team"/>
                     </div>
                     <div className="member__line"></div>
                     <div className="member__name">Krisna Wijaya</div>
@@ -34,7 +31,7 @@ export const Team: React.FC = () => {
                 </div>
                 <div className="member">
                     <div className="member__image">
-                        <img src={img2} alt="member image"/>
+                        <img src={img2} alt="member of our team"/>
                     </div>
                     <div className="member__line"></div>
                     <div className="member__name">Krisna Wijaya</div>
@@ -43,7 +40,7 @@ export const Team: React.FC = () => {
                 </div>
                 <div className="member">
                     <div className="member__image">
-                        <img src={img3} alt="member image"/>
+                        <img src={img3} alt="member of our team"/>
                     </div>
                     <div className="member__line"></div>
                     <div className="member__name">Krisna Wijaya</div>
@@ -52,7 +49,7 @@ export const Team: React.FC = () => {
                 </div>
                 <div className="member">
                     <div className="member__image">
-                        <img src={img4} alt="member image"/>
+                        <img src={img4} alt="member of our team"/>
                     </div>
                     <div className="member__line"></div>
                     <div className="member__name">Krisna Wijaya</div>
@@ -61,7 +58,7 @@ export const Team: React.FC = () => {
                 </div>
                 <div className="member">
                     <div className="member__image">
-                        <img src={img5} alt="member image"/>
+                        <img src={img5} alt="member of our team"/>
                     </div>
                     <div className="member__line"></div>
                     <div className="member__name">Krisna Wijaya</div>

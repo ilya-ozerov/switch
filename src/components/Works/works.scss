@@ -6,6 +6,10 @@
   background-color: #54D154;
   padding: 40px;
 
+  @media (max-width: 768px) {
+    padding: 20px 10px;
+  }
+
   &__title {
     margin-bottom: 10px;
 
