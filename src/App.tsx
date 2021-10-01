@@ -7,6 +7,7 @@ import {Clients} from "./components/Clients/Clients";
 import {Works} from "./components/Works/Works";
 import {Team} from "./components/Team/Team";
 import {Columns} from "./components/Columns/Columns";
+import {Footer} from "./components/Footer/Footer";
 
 export const App: React.FC = () => {
     return (
@@ -26,34 +27,7 @@ export const App: React.FC = () => {
 
             <Columns />
 
-            <footer className="footer">
-
-                <div className="footer__media">
-                    <div className="footer__title title">
-                        <h2>AS SEEN ON</h2>
-                    </div>
-
-                    <div className="footer__items">
-                        <div className="footer__item">
-                            <img src="#" alt="media logo"/>
-                        </div>
-                        <div className="footer__item">
-                            <img src="#" alt="media logo"/>
-                        </div>
-                        <div className="footer__item">
-                            <img src="#" alt="media logo"/>
-                        </div>
-                        <div className="footer__item">
-                            <img src="#" alt="media logo"/>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div className="footer__author">
-                    made with by Krisna :)
-                </div>
-            </footer>
+            <Footer />
         </div>
     );
 }
