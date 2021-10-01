@@ -5,9 +5,15 @@ import soc1 from '../../../assets/images/socials/1.svg';
 import soc2 from '../../../assets/images/socials/2.svg';
 import soc3 from '../../../assets/images/socials/3.svg';
 
-export const Socials: React.FC = () => {
+type SocialsProps = {
+    style?: {
+        backgroundColor: string;
+    }
+}
+
+export const Socials: React.FC<SocialsProps> = ({style}) => {
     return (
-        <div className="socials">
+        <div className={"socials " + style?.backgroundColor}>
             <div className="socials__item">
                 <img src={soc1} alt="social item"/>
             </div>
