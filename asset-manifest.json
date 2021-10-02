@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/switch/static/css/main.bd383093.chunk.css",
-    "main.js": "/switch/static/js/main.acca7d69.chunk.js",
-    "main.js.map": "/switch/static/js/main.acca7d69.chunk.js.map",
-    "runtime-main.js": "/switch/static/js/runtime-main.31fb15f6.js",
-    "runtime-main.js.map": "/switch/static/js/runtime-main.31fb15f6.js.map",
-    "static/js/2.559a97d6.chunk.js": "/switch/static/js/2.559a97d6.chunk.js",
-    "static/js/2.559a97d6.chunk.js.map": "/switch/static/js/2.559a97d6.chunk.js.map",
-    "static/js/3.e42d1baa.chunk.js": "/switch/static/js/3.e42d1baa.chunk.js",
-    "static/js/3.e42d1baa.chunk.js.map": "/switch/static/js/3.e42d1baa.chunk.js.map",
+    "main.css": "/switch/static/css/main.2fc10207.chunk.css",
+    "main.js": "/switch/static/js/main.20d7d851.chunk.js",
+    "main.js.map": "/switch/static/js/main.20d7d851.chunk.js.map",
+    "runtime-main.js": "/switch/static/js/runtime-main.70844dc6.js",
+    "runtime-main.js.map": "/switch/static/js/runtime-main.70844dc6.js.map",
+    "static/js/2.dd6bf484.chunk.js": "/switch/static/js/2.dd6bf484.chunk.js",
+    "static/js/2.dd6bf484.chunk.js.map": "/switch/static/js/2.dd6bf484.chunk.js.map",
+    "static/js/3.0a57d698.chunk.js": "/switch/static/js/3.0a57d698.chunk.js",
+    "static/js/3.0a57d698.chunk.js.map": "/switch/static/js/3.0a57d698.chunk.js.map",
     "index.html": "/switch/index.html",
-    "static/css/main.bd383093.chunk.css.map": "/switch/static/css/main.bd383093.chunk.css.map",
-    "static/js/2.559a97d6.chunk.js.LICENSE.txt": "/switch/static/js/2.559a97d6.chunk.js.LICENSE.txt",
+    "static/css/main.2fc10207.chunk.css.map": "/switch/static/css/main.2fc10207.chunk.css.map",
+    "static/js/2.dd6bf484.chunk.js.LICENSE.txt": "/switch/static/js/2.dd6bf484.chunk.js.LICENSE.txt",
     "static/media/1.0d24d958.png": "/switch/static/media/1.0d24d958.png",
     "static/media/1.370ae1db.svg": "/switch/static/media/1.370ae1db.svg",
     "static/media/1.901507ea.webp": "/switch/static/media/1.901507ea.webp",
@@ -55,9 +55,9 @@
     "static/media/speedometer.33aa8b80.svg": "/switch/static/media/speedometer.33aa8b80.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.31fb15f6.js",
-    "static/js/2.559a97d6.chunk.js",
-    "static/css/main.bd383093.chunk.css",
-    "static/js/main.acca7d69.chunk.js"
+    "static/js/runtime-main.70844dc6.js",
+    "static/js/2.dd6bf484.chunk.js",
+    "static/css/main.2fc10207.chunk.css",
+    "static/js/main.20d7d851.chunk.js"
   ]
 }
