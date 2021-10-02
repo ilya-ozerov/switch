@@ -1,24 +1,64 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './home.scss';
 import bg from "../../assets/images/home/background.png";
 
 export const Home: React.FC = () => {
+
+    const [isBurger, setIsBurger] = useState(false);
+
+    const toggleBurger = (toggleValue: boolean) => {
+        setIsBurger(toggleValue);
+        if (document.body.style.overflow !== "hidden") {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "scroll";
+        }
+    }
+
     return (
         <section className='home'>
             <div className="home__content">
 
                 <header className="header">
-                    <div className="header__menu">
+                    <aside className="header__menu">
                         <ul className="header__list">
-                            <li>Home</li>
+                            <li onClick={() => alert('click')}>Home</li>
                             <li>What we do?</li>
                             <li>Testimonial</li>
                             <li>Contact Us</li>
                         </ul>
-                    </div>
+                    </aside>
+
+                    {
+                        !isBurger &&
+                        <div onClick={() => toggleBurger(true)} className="header__burger">
+                            <div></div>
+                        </div>
+                    }
+
+                    {
+                        isBurger &&
+                        <div className="header__mobile mobile">
+
+                            <div onClick={() => toggleBurger(false)} className="mobile__cross"></div>
+
+                            <div className="mobile__input">
+                                <input type="text" placeholder="Search..."/>
+                            </div>
+
+                            <ul className="mobile__list">
+                                <li onClick={() => alert('click')}>Home</li>
+                                <li>What we do?</li>
+                                <li>Testimonial</li>
+                                <li>Contact Us</li>
+                            </ul>
+
+                        </div>
+                    }
+
                     {/*font Nautilus Pompilius*/}
                     <div className="header__logo">
-                        <span>Switch</span>
+                        Switch
                     </div>
 
                     <div className="header__input">
