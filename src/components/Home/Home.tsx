@@ -2,7 +2,14 @@ import React, {useState} from 'react';
 import './home.scss';
 import bg from "../../assets/images/home/background.png";
 
-export const Home: React.FC = () => {
+type HomeProps = {
+    homeRef: React.RefObject<HTMLDivElement>;
+    whatRef: React.RefObject<HTMLDivElement>;
+    testimonialRef: React.RefObject<HTMLDivElement>;
+    contactRef: React.RefObject<HTMLDivElement>;
+}
+
+export const Home: React.FC<HomeProps> = (props) => {
 
     const [isBurger, setIsBurger] = useState(false);
 
@@ -15,6 +22,14 @@ export const Home: React.FC = () => {
         }
     }
 
+    const scrollTo = (ref: React.RefObject<HTMLDivElement>) => {
+        if (isBurger) {
+            setIsBurger(false);
+            document.body.style.overflow = "scroll";
+        }
+        ref.current?.scrollIntoView({behavior: "smooth"});
+    }
+
     return (
         <section className='home'>
             <div className="home__content">
@@ -22,10 +37,10 @@ export const Home: React.FC = () => {
                 <header className="header">
                     <aside className="header__menu">
                         <ul className="header__list">
-                            <li onClick={() => alert('click')}>Home</li>
-                            <li>What we do?</li>
-                            <li>Testimonial</li>
-                            <li>Contact Us</li>
+                            <li onClick={() => scrollTo(props.homeRef)}>Home</li>
+                            <li onClick={() => scrollTo(props.whatRef)}>What we do?</li>
+                            <li onClick={() => scrollTo(props.testimonialRef)}>Testimonial</li>
+                            <li onClick={() => scrollTo(props.contactRef)}>Contact Us</li>
                         </ul>
                     </aside>
 
@@ -47,10 +62,10 @@ export const Home: React.FC = () => {
                             </div>
 
                             <ul className="mobile__list">
-                                <li onClick={() => alert('click')}>Home</li>
-                                <li>What we do?</li>
-                                <li>Testimonial</li>
-                                <li>Contact Us</li>
+                                <li onClick={() => scrollTo(props.homeRef)}>Home</li>
+                                <li onClick={() => scrollTo(props.whatRef)}>What we do?</li>
+                                <li onClick={() => scrollTo(props.testimonialRef)}>Testimonial</li>
+                                <li onClick={() => scrollTo(props.contactRef)}>Contact Us</li>
                             </ul>
 
                         </div>

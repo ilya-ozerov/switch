@@ -4,9 +4,13 @@ import cameraImg from '../../assets/images/what/camera.svg';
 import caseImg from '../../assets/images/what/case.svg';
 import speedometerImg from '../../assets/images/what/speedometer.svg';
 
-export const What: React.FC = () => {
+type WhatProps = {
+    whatRef: React.RefObject<HTMLDivElement>;
+}
+
+export const What: React.FC<WhatProps> = ({whatRef}) => {
     return (
-        <section className="what">
+        <section ref={whatRef} className="what">
             <div className="what__title title">
                 <h2>WHAT WE DO</h2>
             </div>

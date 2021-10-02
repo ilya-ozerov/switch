@@ -9,7 +9,11 @@ import postImage3 from '../../assets/images/columns/post_image_3.png';
 import postImage4 from '../../assets/images/columns/post_image_4.png';
 import postImage5 from '../../assets/images/columns/post_image_5.png';
 
-export const Columns: React.FC = () => {
+type ColumnsProps = {
+    contactRef: React.RefObject<HTMLDivElement>;
+}
+
+export const Columns: React.FC<ColumnsProps> = ({contactRef}) => {
     return (
         <section className="columns">
             <div className="columns__body">
@@ -88,7 +92,7 @@ export const Columns: React.FC = () => {
                     </ul>
                 </div>
 
-                <div className="columns__contact">
+                <div ref={contactRef} className="columns__contact">
 
                     <div className="columns__title title">
                         <h2>Contact US</h2>

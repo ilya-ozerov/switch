@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './App.scss';
 import {Home} from "./components/Home/Home";
 import {What} from "./components/What/What";
@@ -10,22 +10,31 @@ import {Columns} from "./components/Columns/Columns";
 import {Footer} from "./components/Footer/Footer";
 
 export const App: React.FC = () => {
+
+    const homeRef = useRef<HTMLDivElement>(null);
+    const whatRef = useRef<HTMLDivElement>(null);
+    const testimonialRef = useRef<HTMLDivElement>(null);
+    const contactRef = useRef<HTMLDivElement>(null);
+
     return (
         <div className='wrapper'>
 
-            <Home />
+            <Home contactRef={contactRef}
+                  homeRef={homeRef}
+                  testimonialRef={testimonialRef}
+                  whatRef={whatRef} />
 
-            <What />
+            <What whatRef={whatRef} />
 
             <Works />
 
-            <Testimonials />
+            <Testimonials testimonialRef={testimonialRef} />
 
             <Clients />
 
             <Team />
 
-            <Columns />
+            <Columns contactRef={contactRef} />
 
             <Footer />
         </div>

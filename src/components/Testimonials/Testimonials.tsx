@@ -4,9 +4,13 @@ import avatar from '../../assets/images/testimonials/Herp.svg'
 import next from '../../assets/images/testimonials/next.svg'
 import prev from '../../assets/images/testimonials/prev.svg'
 
-export const Testimonials: React.FC = () => {
+type TestimonialsProps = {
+    testimonialRef: React.RefObject<HTMLDivElement>;
+}
+
+export const Testimonials: React.FC<TestimonialsProps> = ({testimonialRef}) => {
     return (
-        <section className="testimonials">
+        <section ref={testimonialRef} className="testimonials">
             <div className="testimonials__title title">
                 <h2>TESTIMONIALS</h2>
             </div>
