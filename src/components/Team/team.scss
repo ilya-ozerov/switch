@@ -60,6 +60,10 @@
       font-family: ProximaNova;
       font-size: 16px;
       border-radius: 50px;
+
+      &:hover {
+        background-color: #51E864;
+      }
     }
   }
 }

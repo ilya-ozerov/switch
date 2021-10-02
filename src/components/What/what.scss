@@ -92,6 +92,10 @@
       color: #FFFFFF;
       font-family: ProximaNova;
       font-size: 16px;
+
+      &:hover {
+        background-color: #51E864;
+      }
     }
   }
 }

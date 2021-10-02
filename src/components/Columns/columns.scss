@@ -185,6 +185,10 @@
       font-family: ProximaNova;
       text-transform: uppercase;
       background-color: #2B9B2B;
+
+      &:hover {
+        background-color: #29B33A;
+      }
     }
   }
 }
