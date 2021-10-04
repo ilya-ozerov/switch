@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/switch/static/css/main.8a676ba1.chunk.css",
+    "main.css": "/switch/static/css/main.68a796c3.chunk.css",
     "main.js": "/switch/static/js/main.060db2e8.chunk.js",
     "main.js.map": "/switch/static/js/main.060db2e8.chunk.js.map",
     "runtime-main.js": "/switch/static/js/runtime-main.85a80340.js",
@@ -12,7 +12,7 @@
     "static/js/3.5eb5325d.chunk.js.map": "/switch/static/js/3.5eb5325d.chunk.js.map",
     "index.html": "/switch/index.html",
     "static/css/2.ebe5657b.chunk.css.map": "/switch/static/css/2.ebe5657b.chunk.css.map",
-    "static/css/main.8a676ba1.chunk.css.map": "/switch/static/css/main.8a676ba1.chunk.css.map",
+    "static/css/main.68a796c3.chunk.css.map": "/switch/static/css/main.68a796c3.chunk.css.map",
     "static/js/2.ea566c41.chunk.js.LICENSE.txt": "/switch/static/js/2.ea566c41.chunk.js.LICENSE.txt",
     "static/media/1.0d24d958.png": "/switch/static/media/1.0d24d958.png",
     "static/media/1.370ae1db.svg": "/switch/static/media/1.370ae1db.svg",
@@ -59,7 +59,7 @@
     "static/js/runtime-main.85a80340.js",
     "static/css/2.ebe5657b.chunk.css",
     "static/js/2.ea566c41.chunk.js",
-    "static/css/main.8a676ba1.chunk.css",
+    "static/css/main.68a796c3.chunk.css",
     "static/js/main.060db2e8.chunk.js"
   ]
 }
