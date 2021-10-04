@@ -1,8 +1,5 @@
 import React from 'react';
 import './testimonials.scss';
-import avatar from '../../assets/images/testimonials/Herp.svg'
-import next from '../../assets/images/testimonials/next.svg'
-import prev from '../../assets/images/testimonials/prev.svg'
 import {CommentsCarousel} from "./Carousel/CommentsCarousel";
 
 type TestimonialsProps = {
