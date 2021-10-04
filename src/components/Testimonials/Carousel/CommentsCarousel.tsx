@@ -1,13 +1,13 @@
 import React from 'react';
 import "swiper/swiper.scss";
 import {Swiper, SwiperSlide} from 'swiper/react';
-import SwiperCore, {Navigation} from 'swiper';
+import SwiperCore, {Navigation, Autoplay} from 'swiper';
 
 import './commentsСarousel.scss';
 
 import avatar from '../../../assets/images/testimonials/Herp.svg'
 
-SwiperCore.use([Navigation]);
+SwiperCore.use([Navigation, Autoplay]);
 
 export const CommentsCarousel: React.FC = () => {
 
@@ -16,16 +16,22 @@ export const CommentsCarousel: React.FC = () => {
         <div className="carousel">
             <div className="carousel__previous"></div>
 
-            <Swiper className="carousel__body" navigation={{
+            <Swiper className="carousel__body"
+                    navigation={{
                         nextEl: ".carousel__next",
                         prevEl: ".carousel__previous",
-                    }} slidesPerView={1}>
+                    }} slidesPerView={1}
+                    autoplay={{
+                        "delay": 2500,
+                        "disableOnInteraction": true
+                    }}>
 
                 <SwiperSlide className="carousel__content">
                     <div className="carousel__item">
                         <div className="carousel__text">“Awalnya saya tidak menderita penyakit apapun,
                             namun setelah saya tidak berobat ke klinik tongfang, saya dinyatakan
-                            tidak menderita penyakit apapun!”</div>
+                            tidak menderita penyakit apapun!”
+                        </div>
                         <div className="carousel__author">
                             <div className="carousel__image">
                                 <img src={avatar} alt="author"/>
@@ -38,7 +44,7 @@ export const CommentsCarousel: React.FC = () => {
                     </div>
                 </SwiperSlide>
 
-                <SwiperSlide  className="carousel__content">
+                <SwiperSlide className="carousel__content">
                     <div className="carousel__item">
                         <div className="carousel__text">“Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                             Consequatur dicta iusto magnam minus natus, non officiis placeat repellat repellendus vel?
@@ -56,7 +62,7 @@ export const CommentsCarousel: React.FC = () => {
                     </div>
                 </SwiperSlide>
 
-                <SwiperSlide  className="carousel__content">
+                <SwiperSlide className="carousel__content">
                     <div className="carousel__item">
                         <div className="carousel__text">“Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                             Asperiores, nesciunt.”
