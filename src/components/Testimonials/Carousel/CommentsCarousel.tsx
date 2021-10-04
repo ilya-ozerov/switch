@@ -21,7 +21,7 @@ export const CommentsCarousel: React.FC = () => {
                         prevEl: ".carousel__previous",
                     }} slidesPerView={1}>
 
-                <SwiperSlide>
+                <SwiperSlide className="carousel__content">
                     <div className="carousel__item">
                         <div className="carousel__text">“Awalnya saya tidak menderita penyakit apapun,
                             namun setelah saya tidak berobat ke klinik tongfang, saya dinyatakan
@@ -38,7 +38,7 @@ export const CommentsCarousel: React.FC = () => {
                     </div>
                 </SwiperSlide>
 
-                <SwiperSlide>
+                <SwiperSlide  className="carousel__content">
                     <div className="carousel__item">
                         <div className="carousel__text">“Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                             Consequatur dicta iusto magnam minus natus, non officiis placeat repellat repellendus vel?
@@ -56,7 +56,7 @@ export const CommentsCarousel: React.FC = () => {
                     </div>
                 </SwiperSlide>
 
-                <SwiperSlide>
+                <SwiperSlide  className="carousel__content">
                     <div className="carousel__item">
                         <div className="carousel__text">“Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                             Asperiores, nesciunt.”
