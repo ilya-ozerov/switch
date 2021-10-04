@@ -1,0 +1,76 @@
+.carousel {
+  min-width: 0;
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+
+  &__previous {
+    width: 14px;
+    height: 22px;
+    cursor: pointer;
+    background: url("../../../assets/images/testimonials/prev.svg") center no-repeat;
+  }
+  &__next {
+    width: 14px;
+    height: 22px;
+    cursor: pointer;
+    background: url("../../../assets/images/testimonials/next.svg") no-repeat;
+  }
+
+  &__body {
+    max-width: 90vw;
+  }
+
+  &__item {
+    margin: 0 auto;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+  }
+
+  &__text {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #444444;
+    font-size: 16px;
+    line-height: 150%;
+    font-family: ProximaNova;
+  }
+  &__author {
+    display: flex;
+  }
+
+  &__image {
+    width: 43px;
+    height: 43px;
+    border: 1px solid #E1E1E1;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    img {
+      max-width: 100%;
+
+    }
+  }
+  &__info {}
+  &__name {
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-family: ProximaNova;
+    color: #444444;
+  }
+  &__job {
+    color: #CCCCCC;
+    font-size: 16px;
+    font-family: ProximaNova;
+    font-weight: 700;
+  }
+}
