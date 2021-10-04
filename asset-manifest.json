@@ -1,17 +1,19 @@
 {
   "files": {
-    "main.css": "/switch/static/css/main.2fc10207.chunk.css",
-    "main.js": "/switch/static/js/main.20d7d851.chunk.js",
-    "main.js.map": "/switch/static/js/main.20d7d851.chunk.js.map",
-    "runtime-main.js": "/switch/static/js/runtime-main.70844dc6.js",
-    "runtime-main.js.map": "/switch/static/js/runtime-main.70844dc6.js.map",
-    "static/js/2.dd6bf484.chunk.js": "/switch/static/js/2.dd6bf484.chunk.js",
-    "static/js/2.dd6bf484.chunk.js.map": "/switch/static/js/2.dd6bf484.chunk.js.map",
-    "static/js/3.0a57d698.chunk.js": "/switch/static/js/3.0a57d698.chunk.js",
-    "static/js/3.0a57d698.chunk.js.map": "/switch/static/js/3.0a57d698.chunk.js.map",
+    "main.css": "/switch/static/css/main.8a676ba1.chunk.css",
+    "main.js": "/switch/static/js/main.060db2e8.chunk.js",
+    "main.js.map": "/switch/static/js/main.060db2e8.chunk.js.map",
+    "runtime-main.js": "/switch/static/js/runtime-main.85a80340.js",
+    "runtime-main.js.map": "/switch/static/js/runtime-main.85a80340.js.map",
+    "static/css/2.ebe5657b.chunk.css": "/switch/static/css/2.ebe5657b.chunk.css",
+    "static/js/2.ea566c41.chunk.js": "/switch/static/js/2.ea566c41.chunk.js",
+    "static/js/2.ea566c41.chunk.js.map": "/switch/static/js/2.ea566c41.chunk.js.map",
+    "static/js/3.5eb5325d.chunk.js": "/switch/static/js/3.5eb5325d.chunk.js",
+    "static/js/3.5eb5325d.chunk.js.map": "/switch/static/js/3.5eb5325d.chunk.js.map",
     "index.html": "/switch/index.html",
-    "static/css/main.2fc10207.chunk.css.map": "/switch/static/css/main.2fc10207.chunk.css.map",
-    "static/js/2.dd6bf484.chunk.js.LICENSE.txt": "/switch/static/js/2.dd6bf484.chunk.js.LICENSE.txt",
+    "static/css/2.ebe5657b.chunk.css.map": "/switch/static/css/2.ebe5657b.chunk.css.map",
+    "static/css/main.8a676ba1.chunk.css.map": "/switch/static/css/main.8a676ba1.chunk.css.map",
+    "static/js/2.ea566c41.chunk.js.LICENSE.txt": "/switch/static/js/2.ea566c41.chunk.js.LICENSE.txt",
     "static/media/1.0d24d958.png": "/switch/static/media/1.0d24d958.png",
     "static/media/1.370ae1db.svg": "/switch/static/media/1.370ae1db.svg",
     "static/media/1.901507ea.webp": "/switch/static/media/1.901507ea.webp",
@@ -50,14 +52,14 @@
     "static/media/works.scss": "/switch/static/media/button_shape.b7c325ef.svg",
     "static/media/camera.81a59937.svg": "/switch/static/media/camera.81a59937.svg",
     "static/media/case.30bd6300.svg": "/switch/static/media/case.30bd6300.svg",
-    "static/media/next.73735008.svg": "/switch/static/media/next.73735008.svg",
-    "static/media/prev.3c7f5434.svg": "/switch/static/media/prev.3c7f5434.svg",
+    "static/media/commentsСarousel.scss": "/switch/static/media/prev.3c7f5434.svg",
     "static/media/speedometer.33aa8b80.svg": "/switch/static/media/speedometer.33aa8b80.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.70844dc6.js",
-    "static/js/2.dd6bf484.chunk.js",
-    "static/css/main.2fc10207.chunk.css",
-    "static/js/main.20d7d851.chunk.js"
+    "static/js/runtime-main.85a80340.js",
+    "static/css/2.ebe5657b.chunk.css",
+    "static/js/2.ea566c41.chunk.js",
+    "static/css/main.8a676ba1.chunk.css",
+    "static/js/main.060db2e8.chunk.js"
   ]
 }
