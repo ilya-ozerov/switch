@@ -1,3 +1,5 @@
+@import "src/variables";
+
 .home {
   position: relative;
 
@@ -61,11 +63,17 @@
       //font-size: 26px;
       //padding: 16px 27px;
 
-      background-color: #54D154;
+      background-color: $green-button-color;
       border-radius: 40px;
 
+      transition-duration: 0.5s;
+
       &:hover {
-        background-color: #51E864;
+        background-color: $green-button-hover-color;
+      }
+
+      &:active {
+        background-color: $green-button-active-color;
       }
     }
   }
@@ -84,6 +92,17 @@
     position: relative;
     cursor: pointer;
     user-select: none;
+    transition-duration: 0.5s;
+
+    animation: scroll ease-in-out 1s infinite;
+
+    &:hover {
+      background-color: rgba(#FFFFFF, 0.9);
+    }
+
+    &:active {
+      background-color: rgba(#FFFFFF, 1);
+    }
 
     div {
       &:after {
@@ -128,18 +147,23 @@
 
     line-height: 150%;
 
+
     li {
       margin-right: 20px;
       position: relative;
       cursor: pointer;
 
       padding-top: 4px;
+      user-select: none;
+
+
 
       &:last-child {
         margin: 0;
       }
 
       &:hover {
+
         &:after {
           content: '';
           position: absolute;
@@ -148,6 +172,8 @@
           background-color: #54D154;
           top: 0;
           left: 0;
+
+          animation: menu-link-head linear 0.2s;
         }
       }
     }
@@ -170,15 +196,22 @@
 
     background-color: rgba(#FFFFFF, 0.8);
     border-radius: 20px;
-    overflow: hidden;
+    //overflow: hidden;
     width: 180px;
     height: 30px;
+
+    transition-duration: 0.5s;
 
     @media (max-width: 767px) {
       display: none;
     }
 
+    &:focus-within {
+      box-shadow: 0px 0px 10px #54D154;
+    }
+
     input {
+      border-radius: 20px;
       font-size: 16px;
       font-family: ProximaNova;
       padding: 10px;
@@ -336,6 +369,12 @@
     width: 180px;
     height: 30px;
 
+    transition-duration: 0.5s;
+
+    &:focus-within {
+      transform: scale3d(1.1, 1.1, 1.1);
+    }
+
     input {
       font-size: 16px;
       font-family: ProximaNova;
@@ -366,31 +405,33 @@
       position: relative;
       cursor: pointer;
       user-select: none;
+      transition-duration: 0.5s;
 
-      //background-color: #111111;
 
       padding-top: 4px;
 
-      //&:last-child {
-      //  margin: 0;
-      //}
+      &:last-child {
+        margin: 0;
+      }
 
       &:hover {
-        //&:after {
-        //  content: '';
-        //  position: absolute;
-        //  height: 6px;
-        //  width: 100%;
-        //  background-color: #54D154;
-        //  top: 0;
-        //  left: 0;
-        //}
+        transform: scale3d(1.1, 1.1, 1.1);
       }
     }
   }
 
   @media (max-width: 992px) {
 
+  }
+}
+
+@keyframes menu-link-head {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
   }
 }
 
@@ -421,5 +462,19 @@
 
   100% {
     transform: rotate(-45deg);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translate(0px);
+  }
+
+  50% {
+    transform: translate(0px, -5px);
+  }
+
+  100% {
+    transform: translate(0px, -0px);
   }
 }

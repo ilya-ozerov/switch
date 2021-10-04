@@ -1,3 +1,5 @@
+@import "../../variables";
+
 .what {
   padding: 40px;
   min-height: 50vh;
@@ -85,7 +87,7 @@
   }
   &__button {
     button {
-      background-color: #54D154;
+      background-color: $green-button-color;
       width: 120px;
       height: 30px;
       border-radius: 15px;
@@ -93,8 +95,14 @@
       font-family: ProximaNova;
       font-size: 16px;
 
+      transition-duration: 0.5s;
+
       &:hover {
-        background-color: #51E864;
+        background-color: $green-button-hover-color;
+      }
+
+      &:active {
+        background-color: $green-button-active-color;
       }
     }
   }

@@ -5,7 +5,9 @@
   background-color: #C5E9C5;
   padding: 5px;
   border-radius: 15px;
+
   &__item {
+    transition-duration: 0.5s;
     &:hover {
       transform: scale(1.1,1.1);
     }

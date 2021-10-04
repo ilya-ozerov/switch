@@ -1,3 +1,5 @@
+@import "src/variables";
+
 .works {
   min-height: 50vh;
   display: flex;
@@ -42,7 +44,7 @@
 
   &__selector {
     display: flex;
-    background-color: #FFFFFF;
+    background-color: $selector-bg-color;
     width: 280px;
     height: 30px;
     border-radius: 30px;
@@ -55,24 +57,25 @@
       text-align: center;
       font-size: 16px;
       font-family: ProximaNova;
-      color: #2B9B2B;
-      //background-color: #828181;
+      color: $selector-text-color;
       border-right: 2px solid #2B9B2B;
       cursor: pointer;
       user-select: none;
+
+      transition-duration: 0.5s;
 
       &:last-child {
         border-right: 0;
       }
 
       &:hover {
-        background-color: #29B350;
-        color: #FFFFFF;
+        background-color: $selector-bg-hover-color;
+        color: $selector-text-hover-color;
       }
 
       &:active {
-        color: #FFFFFF;
-        background-color: #2B9B2B;
+        color: $selector-text-hover-color;
+        background-color: $selector-bg-active-color;
       }
     }
   }
@@ -105,7 +108,7 @@
   }
 
   &__button {
-    background-color: #2B9B2B;
+    background-color: $darkgreen-button-color;
     width: 200px;
     height: 50px;
     font-size: 18px;
@@ -118,8 +121,14 @@
     cursor: pointer;
     user-select: none;
 
+    transition-duration: 0.5s;
+
     &:hover {
-      background-color: #29B33A;
+      background-color: $darkgreen-button-hover-color;
+    }
+
+    &:active {
+      background-color: $darkgreen-button-active-color;
     }
 
     &:after {

@@ -11,12 +11,25 @@
     height: 22px;
     cursor: pointer;
     background: url("../../../assets/images/testimonials/prev.svg") center no-repeat;
+
+    transition-duration: 0.5s;
+
+    &:hover {
+      transform: scale3d(1.1, 1.1, 1.1);
+    }
+
   }
   &__next {
     width: 14px;
     height: 22px;
     cursor: pointer;
     background: url("../../../assets/images/testimonials/next.svg") no-repeat;
+
+    transition-duration: 0.5s;
+
+    &:hover {
+      transform: scale3d(1.1, 1.1, 1.1);
+    }
   }
 
   &__body {

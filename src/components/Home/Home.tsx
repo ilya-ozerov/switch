@@ -91,7 +91,7 @@ export const Home: React.FC<HomeProps> = (props) => {
                     </div>
                 </div>
 
-                <div className="home__scroll">
+                <div className="home__scroll" onClick={() => scrollTo(props.whatRef)} >
                     <div>scroll down</div>
                 </div>
             </div>

@@ -1,3 +1,5 @@
+@import "src/variables";
+
 .team {
   background-color: #54D154;
   min-height: 50vh;
@@ -50,7 +52,7 @@
 
   &__button {
     button {
-      background-color: #54D154;
+      background-color: $green-button-color;
       width: 200px;
       height: 50px;
       text-align: center;
@@ -61,8 +63,14 @@
       font-size: 16px;
       border-radius: 50px;
 
+      transition-duration: 0.5s;
+
       &:hover {
-        background-color: #51E864;
+        background-color: $green-button-hover-color;
+      }
+
+      &:active {
+        background-color: $green-button-active-color;
       }
     }
   }

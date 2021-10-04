@@ -1,3 +1,5 @@
+@import "src/variables";
+
 .clients {
   background-color: #F2F1F1;
   min-height: 50vh;
@@ -31,10 +33,12 @@
     gap: 50px;
 
     margin-bottom: 20px;
+
+
   }
 
   &__button {
-    background-color: #DDDCDC;
+    background-color: $grey-button-color;
     width: 200px;
     height: 50px;
     font-size: 18px;
@@ -46,6 +50,18 @@
     line-height: 50px;
     position: relative;
     cursor: pointer;
+    user-select: none;
+
+    transition-duration: 0.5s;
+
+    &:hover {
+      //color: #FFFFFF;
+      background-color: $grey-button-hover-color;
+    }
+    &:active {
+      //color: #FFFFFF;
+      background-color: $grey-button-active-color;
+    }
 
     &:after {
       content: '';
@@ -69,7 +85,6 @@
     height: 70px;
     display: flex;
     align-items: center;
-
 
     img {
       max-width: 100%;
