@@ -1,0 +1,16 @@
+.client {
+  display: flex;
+  justify-content: center;
+  user-select: none;
+
+
+  &__image {
+    height: 70px;
+    display: flex;
+    align-items: center;
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
