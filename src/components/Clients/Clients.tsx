@@ -1,16 +1,32 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './clients.scss';
-
-import google from '../../assets/images/clients/Google.svg';
-import yahoo from '../../assets/images/clients/Yahoo_Logo.svg';
-import msft from '../../assets/images/clients/MSFT.svg';
-import intel from '../../assets/images/clients/Intel.svg';
-import qualcomm from '../../assets/images/clients/Qualcomm.svg';
-import cisco from '../../assets/images/clients/Cisco.svg';
-import apple from '../../assets/images/clients/Apple-logo.svg';
-import asus from '../../assets/images/clients/ASUS_Logo.svg';
+import {Client} from "./Client/Client";
+import {useDispatch, useSelector} from "react-redux";
+import {selectClients, selectIsFetchingClients} from "../../redux/clientsSelectors";
+import {getAllClients, getClients} from "../../redux/clientsReducer";
 
 export const Clients: React.FC = () => {
+
+    const [isAll, setIsAll] = useState(false);
+
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(getClients());
+    }, []);
+
+    const clients = useSelector(selectClients);
+    const isFetchingClients = useSelector(selectIsFetchingClients);
+
+    const clientsList = clients.map((client, index) => {
+        return <Client key={client.id} imageUrl={client.imageUrl} imageAlt={client.imageAlt}/>
+    })
+
+    const onClick = () => {
+        setIsAll(true);
+        dispatch(getAllClients());
+    }
+
     return (
         <section className="clients">
             <div className="clients__title title">
@@ -21,52 +37,19 @@ export const Clients: React.FC = () => {
             </div>
 
             <div className="clients__items">
-                <div className="client">
-                    <div className="client__image">
-                        <img src={google} alt="client"/>
-                    </div>
-                </div>
-                <div className="client">
-                    <div className="client__image">
-                        <img src={yahoo} alt="client"/>
-                    </div>
-                </div>
-                <div className="client">
-                    <div className="client__image">
-                        <img src={msft} alt="client"/>
-                    </div>
-                </div>
-                <div className="client">
-                    <div className="client__image">
-                        <img src={intel} alt="client"/>
-                    </div>
-                </div>
-                <div className="client">
-                    <div className="client__image">
-                        <img src={qualcomm} alt="client"/>
-                    </div>
-                </div>
-                <div className="client">
-                    <div className="client__image">
-                        <img src={cisco} alt="client"/>
-                    </div>
-                </div>
-                <div className="client">
-                    <div className="client__image">
-                        <img src={apple} alt="client"/>
-                    </div>
-                </div>
-                <div className="client">
-                    <div className="client__image">
-                        <img src={asus} alt="client"/>
-                    </div>
-                </div>
-
+                {
+                    isFetchingClients && <div>Fetching....</div>
+                }
+                {
+                    !isFetchingClients && clientsList
+                }
             </div>
 
-            <div className="clients__button">
-                See all clients
-            </div>
+            {
+                !isAll && <div onClick={onClick} className="clients__button">
+                    See all clients
+                </div>
+            }
         </section>
     );
 }
