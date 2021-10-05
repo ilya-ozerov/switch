@@ -9,6 +9,7 @@ type WhatProps = {
 }
 
 export const What: React.FC<WhatProps> = ({whatRef}) => {
+
     return (
         <section ref={whatRef} className="what">
             <div className="what__title title">
