@@ -37,6 +37,7 @@ export const App: React.FC = () => {
             <Columns contactRef={contactRef} />
 
             <Footer />
+
         </div>
     );
 }
