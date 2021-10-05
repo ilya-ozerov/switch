@@ -1,17 +1,36 @@
 import React from 'react';
 import './works.scss';
-import img1 from '../../assets/images/works/1.png'
-import img2 from '../../assets/images/works/2.png'
-import img3 from '../../assets/images/works/3.png'
-import img4 from '../../assets/images/works/4.png'
-import img5 from '../../assets/images/works/5.png'
-import img6 from '../../assets/images/works/6.png'
-import img7 from '../../assets/images/works/7.png'
-import img8 from '../../assets/images/works/8.png'
-import img9 from '../../assets/images/works/9.png'
-import img10 from '../../assets/images/works/10.png'
+import img1 from '../../assets/images/works/photos/1.png'
+import img2 from '../../assets/images/works/photos/2.png'
+import img3 from '../../assets/images/works/photos/3.png'
+import img4 from '../../assets/images/works/photos/4.png'
+import img5 from '../../assets/images/works/photos/5.png'
+import img6 from '../../assets/images/works/photos/6.png'
+import img7 from '../../assets/images/works/photos/7.png'
+import img8 from '../../assets/images/works/photos/8.png'
+import img9 from '../../assets/images/works/photos/9.png'
+import img10 from '../../assets/images/works/photos/10.png'
+import {Item} from "./Item/Item";
 
 export const Works: React.FC = () => {
+
+    const works = [
+        {imageUrl: img1, imageAlt: 'work'},
+        {imageUrl: img2, imageAlt: 'work'},
+        {imageUrl: img3, imageAlt: 'work'},
+        {imageUrl: img4, imageAlt: 'work'},
+        {imageUrl: img5, imageAlt: 'work'},
+        {imageUrl: img6, imageAlt: 'work'},
+        {imageUrl: img7, imageAlt: 'work'},
+        {imageUrl: img8, imageAlt: 'work'},
+        {imageUrl: img9, imageAlt: 'work'},
+        {imageUrl: img10, imageAlt: 'work'},
+    ]
+
+    const worksList = works.map((w, i) => {
+        return <Item imageUrl={w.imageUrl} imageAlt={w.imageAlt} />
+    })
+
     return (
         <section className='works'>
             <div className="works__title title">
@@ -27,36 +46,7 @@ export const Works: React.FC = () => {
                     <li>Print</li>
                 </ul>
                 <div className="works__gallery">
-                    <div className="works__item">
-                        <img src={img1} alt="our work item"/>
-                    </div>
-                    <div className="works__item">
-                        <img src={img2} alt="our work item"/>
-                    </div>
-                    <div className="works__item">
-                        <img src={img3} alt="our work item"/>
-                    </div>
-                    <div className="works__item">
-                        <img src={img4} alt="our work item"/>
-                    </div>
-                    <div className="works__item">
-                        <img src={img5} alt="our work item"/>
-                    </div>
-                    <div className="works__item">
-                        <img src={img6} alt="our work item"/>
-                    </div>
-                    <div className="works__item">
-                        <img src={img7} alt="our work item"/>
-                    </div>
-                    <div className="works__item">
-                        <img src={img8} alt="our work item"/>
-                    </div>
-                    <div className="works__item">
-                        <img src={img9} alt="our work item"/>
-                    </div>
-                    <div className="works__item">
-                        <img src={img10} alt="our work item"/>
-                    </div>
+                    {worksList}
                 </div>
             </div>
             <div className="works__button">
