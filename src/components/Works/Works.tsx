@@ -1,34 +1,41 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './works.scss';
-import img1 from '../../assets/images/works/photos/1.png'
-import img2 from '../../assets/images/works/photos/2.png'
-import img3 from '../../assets/images/works/photos/3.png'
-import img4 from '../../assets/images/works/photos/4.png'
-import img5 from '../../assets/images/works/photos/5.png'
-import img6 from '../../assets/images/works/photos/6.png'
-import img7 from '../../assets/images/works/photos/7.png'
-import img8 from '../../assets/images/works/photos/8.png'
-import img9 from '../../assets/images/works/photos/9.png'
-import img10 from '../../assets/images/works/photos/10.png'
 import {Item} from "./Item/Item";
+import {useDispatch, useSelector} from "react-redux";
+import {selectDesigns, selectIsAllWorks, selectPhotos, selectPrints} from "../../redux/worksSelectors";
+import {getMoreWorks, getWorks} from "../../redux/worksReducer";
+
+enum Switcher { Photography, Design, Print }
 
 export const Works: React.FC = () => {
 
-    const works = [
-        {imageUrl: img1, imageAlt: 'work'},
-        {imageUrl: img2, imageAlt: 'work'},
-        {imageUrl: img3, imageAlt: 'work'},
-        {imageUrl: img4, imageAlt: 'work'},
-        {imageUrl: img5, imageAlt: 'work'},
-        {imageUrl: img6, imageAlt: 'work'},
-        {imageUrl: img7, imageAlt: 'work'},
-        {imageUrl: img8, imageAlt: 'work'},
-        {imageUrl: img9, imageAlt: 'work'},
-        {imageUrl: img10, imageAlt: 'work'},
-    ]
+    const [switcher, setSwitcher] = useState<Switcher>(Switcher.Photography)
+    const dispatch = useDispatch();
 
-    const worksList = works.map((w, i) => {
-        return <Item imageUrl={w.imageUrl} imageAlt={w.imageAlt} />
+    useEffect(() => {
+        dispatch(getWorks());
+    }, [])
+
+    const photos = useSelector(selectPhotos);
+    const designs = useSelector(selectDesigns);
+    const prints = useSelector(selectPrints);
+
+    const isAll = useSelector(selectIsAllWorks);
+
+    const setCategory = (category: Switcher) => {
+        setSwitcher(category);
+    }
+
+    const photosList = photos.map(photo => {
+        return <Item key={photo.id} imageUrl={photo.imageUrl} imageAlt={photo.imageAlt}/>
+    })
+
+    const designsList = designs.map(design => {
+        return <Item key={design.id} imageUrl={design.imageUrl} imageAlt={design.imageAlt}/>
+    })
+
+    const printsList = prints.map(print => {
+        return <Item key={print.id} imageUrl={print.imageUrl} imageAlt={print.imageAlt}/>
     })
 
     return (
@@ -40,18 +47,52 @@ export const Works: React.FC = () => {
                 <h3>Lorem ipsum dolor sit amet. Proin gravida nibh vel velit auctor aliquet.</h3>
             </div>
             <div className="works__body">
-                <ul className="works__selector">
-                    <li>Photography</li>
-                    <li>Design</li>
-                    <li>Print</li>
-                </ul>
+                <div className="works__selector">
+                    <div className={
+                        switcher === Switcher.Photography
+                            ? "works__selector-item works__selector-active-item"
+                            : "works__selector-item"}
+                         onClick={() => setCategory(Switcher.Photography)}>Photography
+                    </div>
+
+                    <div className={
+                        switcher === Switcher.Design
+                            ? "works__selector-item works__selector-active-item"
+                            : "works__selector-item"}
+                         onClick={() => setCategory(Switcher.Design)}>Design
+                    </div>
+
+                    <div className={
+                        switcher === Switcher.Print
+                            ? "works__selector-item works__selector-active-item"
+                            : "works__selector-item"}
+                         onClick={() => setCategory(Switcher.Print)}>Print
+                    </div>
+                </div>
                 <div className="works__gallery">
-                    {worksList}
+                    {switcher === Switcher.Photography && photosList}
+                    {switcher === Switcher.Design && designsList}
+                    {switcher === Switcher.Print && printsList}
                 </div>
             </div>
-            <div className="works__button">
-                View more work
-            </div>
+            {
+                (switcher === Switcher.Photography && !isAll.photos) &&
+                <div onClick={() => dispatch(getMoreWorks())} className="works__button">
+                    View more work
+                </div>
+            }
+            {
+                (switcher === Switcher.Design && !isAll.designs) &&
+                <div onClick={() => dispatch(getMoreWorks())} className="works__button">
+                    View more work
+                </div>
+            }
+            {
+                (switcher === Switcher.Print && !isAll.prints) &&
+                <div onClick={() => dispatch(getMoreWorks())} className="works__button">
+                    View more work
+                </div>
+            }
         </section>
     );
 }
