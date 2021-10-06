@@ -44,40 +44,45 @@
 
   &__selector {
     display: flex;
-    background-color: $selector-bg-color;
     width: 280px;
     height: 30px;
     border-radius: 30px;
     overflow: hidden;
     margin-bottom: 50px;
+  }
 
-    li {
-      flex: 1 1 auto;
-      line-height: 30px;
-      text-align: center;
-      font-size: 16px;
-      font-family: ProximaNova;
-      color: $selector-text-color;
-      border-right: 2px solid #2B9B2B;
-      cursor: pointer;
-      user-select: none;
+  &__selector-item {
+    background-color: $selector-bg-color;
+    flex: 1 1 auto;
+    line-height: 30px;
+    text-align: center;
+    font-size: 16px;
+    font-family: ProximaNova;
+    color: $selector-text-color;
+    border-right: 2px solid #2B9B2B;
+    cursor: pointer;
+    user-select: none;
 
-      transition-duration: 0.5s;
+    transition-duration: 0.5s;
 
-      &:last-child {
-        border-right: 0;
-      }
-
-      &:hover {
-        background-color: $selector-bg-hover-color;
-        color: $selector-text-hover-color;
-      }
-
-      &:active {
-        color: $selector-text-hover-color;
-        background-color: $selector-bg-active-color;
-      }
+    &:last-child {
+      border-right: 0;
     }
+
+    &:hover {
+      background-color: $selector-bg-hover-color;
+      color: $selector-text-hover-color;
+    }
+
+    //&:active {
+    //  color: $selector-text-hover-color;
+    //  background-color: $selector-bg-active-color;
+    //}
+  }
+
+  &__selector-active-item {
+    color: $selector-text-active-color;
+    background-color: $selector-bg-active-color;
   }
 
   &__gallery {
