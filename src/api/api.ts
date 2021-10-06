@@ -15,16 +15,16 @@ import pinterest from "../assets/images/clients/pin.png";
 
 import {v1} from "uuid";
 
-import photo1 from "../assets/images/works/photos/1.png";
-import photo2 from "../assets/images/works/photos/2.png";
-import photo3 from "../assets/images/works/photos/3.png";
-import photo4 from "../assets/images/works/photos/4.png";
-import photo5 from "../assets/images/works/photos/5.png";
-import photo6 from "../assets/images/works/photos/6.png";
-import photo7 from "../assets/images/works/photos/7.png";
-import photo8 from "../assets/images/works/photos/8.png";
-import photo9 from "../assets/images/works/photos/9.png";
-import photo10 from "../assets/images/works/photos/10.png";
+// import photo1 from "../assets/images/works/photos/1.png";
+// import photo2 from "../assets/images/works/photos/2.png";
+// import photo3 from "../assets/images/works/photos/3.png";
+// import photo4 from "../assets/images/works/photos/4.png";
+// import photo5 from "../assets/images/works/photos/5.png";
+// import photo6 from "../assets/images/works/photos/6.png";
+// import photo7 from "../assets/images/works/photos/7.png";
+// import photo8 from "../assets/images/works/photos/8.png";
+// import photo9 from "../assets/images/works/photos/9.png";
+// import photo10 from "../assets/images/works/photos/10.png";
 
 import print1 from "../assets/images/works/prints/1.jpg";
 import print2 from "../assets/images/works/prints/2.jpg";
@@ -79,16 +79,24 @@ export const clientsAPI = {
 
 const works = {
     photography: [
-        {id: v1(), name: 'photo 1', author: 'Author Author', imageUrl: photo1, imageAlt: 'author\'s  work'},
-        {id: v1(), name: 'photo 2', author: 'Author Author', imageUrl: photo2, imageAlt: 'author\'s  work'},
-        {id: v1(), name: 'photo 3', author: 'Author Author', imageUrl: photo3, imageAlt: 'author\'s  work'},
-        {id: v1(), name: 'photo 4', author: 'Author Author', imageUrl: photo4, imageAlt: 'author\'s  work'},
-        {id: v1(), name: 'photo 5', author: 'Author Author', imageUrl: photo5, imageAlt: 'author\'s  work'},
-        {id: v1(), name: 'photo 6', author: 'Author Author', imageUrl: photo6, imageAlt: 'author\'s  work'},
-        {id: v1(), name: 'photo 7', author: 'Author Author', imageUrl: photo7, imageAlt: 'author\'s  work'},
-        {id: v1(), name: 'photo 8', author: 'Author Author', imageUrl: photo8, imageAlt: 'author\'s  work'},
-        {id: v1(), name: 'photo 9', author: 'Author Author', imageUrl: photo9, imageAlt: 'author\'s  work'},
-        {id: v1(), name: 'photo 10', author: 'Author Author', imageUrl: photo10, imageAlt: 'author\'s  work'},
+        {id: v1(), name: 'photo 1', author: 'Author Author', imageUrl: 'https://picsum.photos/id/21/1200/800', imageAlt: 'author\'s  work'},
+        {id: v1(), name: 'photo 2', author: 'Author Author', imageUrl: 'https://picsum.photos/id/22/1200/800', imageAlt: 'author\'s  work'},
+        {id: v1(), name: 'photo 3', author: 'Author Author', imageUrl: 'https://picsum.photos/id/23/1200/800', imageAlt: 'author\'s  work'},
+        {id: v1(), name: 'photo 4', author: 'Author Author', imageUrl: 'https://picsum.photos/id/24/1200/800', imageAlt: 'author\'s  work'},
+        {id: v1(), name: 'photo 5', author: 'Author Author', imageUrl: 'https://picsum.photos/id/25/1200/800', imageAlt: 'author\'s  work'},
+        {id: v1(), name: 'photo 6', author: 'Author Author', imageUrl: 'https://picsum.photos/id/26/1200/800', imageAlt: 'author\'s  work'},
+        {id: v1(), name: 'photo 7', author: 'Author Author', imageUrl: 'https://picsum.photos/id/27/1200/800', imageAlt: 'author\'s  work'},
+        {id: v1(), name: 'photo 8', author: 'Author Author', imageUrl: 'https://picsum.photos/id/28/1200/800', imageAlt: 'author\'s  work'},
+        {id: v1(), name: 'photo 9', author: 'Author Author', imageUrl: 'https://picsum.photos/id/29/1200/800', imageAlt: 'author\'s  work'},
+        {id: v1(), name: 'photo 10', author: 'Author Author', imageUrl: 'https://picsum.photos/id/10/1200/800', imageAlt: 'author\'s  work'},
+        {id: v1(), name: 'photo 11', author: 'Author Author', imageUrl: 'https://picsum.photos/id/11/1200/800', imageAlt: 'author\'s  work'},
+        {id: v1(), name: 'photo 12', author: 'Author Author', imageUrl: 'https://picsum.photos/id/12/1200/800', imageAlt: 'author\'s  work'},
+        {id: v1(), name: 'photo 13', author: 'Author Author', imageUrl: 'https://picsum.photos/id/13/1200/800', imageAlt: 'author\'s  work'},
+        {id: v1(), name: 'photo 14', author: 'Author Author', imageUrl: 'https://picsum.photos/id/14/1200/800', imageAlt: 'author\'s  work'},
+        {id: v1(), name: 'photo 15', author: 'Author Author', imageUrl: 'https://picsum.photos/id/15/1200/800', imageAlt: 'author\'s  work'},
+        {id: v1(), name: 'photo 16', author: 'Author Author', imageUrl: 'https://picsum.photos/id/16/1200/800', imageAlt: 'author\'s  work'},
+        {id: v1(), name: 'photo 17', author: 'Author Author', imageUrl: 'https://picsum.photos/id/17/1200/800', imageAlt: 'author\'s  work'},
+        {id: v1(), name: 'photo 18', author: 'Author Author', imageUrl: 'https://picsum.photos/id/18/1200/800', imageAlt: 'author\'s  work'},
     ],
     design: [
         {id: v1(), name: 'design 1', author: 'Author Author', imageUrl: design, imageAlt: 'author\'s design'},
