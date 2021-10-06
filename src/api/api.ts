@@ -6,6 +6,13 @@ import qualcomm from "../assets/images/clients/Qualcomm.svg";
 import cisco from "../assets/images/clients/Cisco.svg";
 import apple from "../assets/images/clients/Apple-logo.svg";
 import asus from "../assets/images/clients/ASUS_Logo.svg";
+
+import esa from "../assets/images/clients/esa.png";
+import spotify from "../assets/images/clients/spotify.png";
+import linkedin from "../assets/images/clients/in.png";
+import irex from "../assets/images/clients/irex.png";
+import pinterest from "../assets/images/clients/pin.png";
+
 import {v1} from "uuid";
 
 import photo1 from "../assets/images/works/photos/1.png";
@@ -41,7 +48,8 @@ import print19 from "../assets/images/works/prints/19.jpg";
 import print20 from "../assets/images/works/prints/20.jpg";
 
 
-import design from "../assets/images/works/design/design.png";
+import design from "../assets/images/works/design/design.jpeg";
+import {Works} from "../types/types";
 
 const clients = [
     {id: v1(), name: 'Google', imageUrl: google, imageAlt: 'Google company logo'},
@@ -53,32 +61,20 @@ const clients = [
     {id: v1(), name: 'Apple', imageUrl: apple, imageAlt: 'Apple company logo'},
     {id: v1(), name: 'Asus', imageUrl: asus, imageAlt: 'Asus company logo'},
 
-    {id: v1(), name: 'Google', imageUrl: google, imageAlt: 'Google company logo'},
-    {id: v1(), name: 'Yahoo', imageUrl: yahoo, imageAlt: 'Yahoo company logo'},
-    {id: v1(), name: 'Microsoft', imageUrl: msft, imageAlt: 'Microsoft company logo'},
-    {id: v1(), name: 'Intel', imageUrl: intel, imageAlt: 'Intel company logo'},
-    {id: v1(), name: 'Qualcomm', imageUrl: qualcomm, imageAlt: 'Qualcomm company logo'},
-    {id: v1(), name: 'Cisco', imageUrl: cisco, imageAlt: 'Cisco company logo'},
-    {id: v1(), name: 'Apple', imageUrl: apple, imageAlt: 'Apple company logo'},
-    {id: v1(), name: 'Asus', imageUrl: asus, imageAlt: 'Asus company logo'},
-
-    {id: v1(), name: 'Google', imageUrl: google, imageAlt: 'Google company logo'},
-    {id: v1(), name: 'Yahoo', imageUrl: yahoo, imageAlt: 'Yahoo company logo'},
-    {id: v1(), name: 'Microsoft', imageUrl: msft, imageAlt: 'Microsoft company logo'},
-    {id: v1(), name: 'Intel', imageUrl: intel, imageAlt: 'Intel company logo'},
-    {id: v1(), name: 'Qualcomm', imageUrl: qualcomm, imageAlt: 'Qualcomm company logo'},
-    {id: v1(), name: 'Cisco', imageUrl: cisco, imageAlt: 'Cisco company logo'},
-    {id: v1(), name: 'Apple', imageUrl: apple, imageAlt: 'Apple company logo'},
-    {id: v1(), name: 'Asus', imageUrl: asus, imageAlt: 'Asus company logo'},
+    {id: v1(), name: 'Esa', imageUrl: esa, imageAlt: 'Esa company logo'},
+    {id: v1(), name: 'Spotify', imageUrl: spotify, imageAlt: 'Spotify company logo'},
+    {id: v1(), name: 'Linkedin', imageUrl: linkedin, imageAlt: 'Linkedin company logo'},
+    {id: v1(), name: 'Irex', imageUrl: irex, imageAlt: 'Irex company logo'},
+    {id: v1(), name: 'Pinterest', imageUrl: pinterest, imageAlt: 'Pinterest company logo'},
 ]
 
 export const clientsAPI = {
-    getClients: (startIndex?: number, pageSize: number = 8) => {
-        return clients.slice(startIndex, pageSize);
+    getClients: (startIndex: number, pageSize?: number) => {
+        if (pageSize === undefined) {
+            return clients.slice(startIndex);
+        }
+        return clients.slice(startIndex, startIndex + pageSize);
     },
-    getAllClients: () => {
-        return clients;
-    }
 }
 
 const works = {
@@ -145,4 +141,30 @@ const works = {
         {id: v1(), name: 'print 19', author: 'Author Author', imageUrl: print19, imageAlt: 'author\'s print'},
         {id: v1(), name: 'print 20', author: 'Author Author', imageUrl: print20, imageAlt: 'author\'s print'},
     ],
+}
+
+export const worksAPI = {
+    getWorks: (startIndex: number, pageSize: number): Works => {
+
+        const photos = works.photography.slice(startIndex, startIndex + pageSize);
+        const print = works.print.slice(startIndex, startIndex + pageSize);
+        const design = works.design.slice(startIndex, startIndex + pageSize);
+
+        const worksPart = {
+            photography: photos,
+            print: print,
+            design: design,
+        }
+
+        if (photos.length === 0) {
+            console.log('No more photographies');
+        }
+        if (print.length === 0) {
+            console.log('No more design');
+        }
+        if (design.length === 0) {
+            console.log('No more print');
+        }
+        return worksPart;
+    },
 }
