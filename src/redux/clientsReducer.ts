@@ -6,9 +6,17 @@ import {clientsAPI} from "../api/api";
 const CLIENTS_RECEIVED = 'switch/clients/CLIENTS_RECEIVED';
 const IS_FETCHING_CLIENTS_CHANGED = 'switch/clients/IS_FETCHING_CLIENTS_CHANGED';
 
+// const MORE_WORKS_RECEIVED = 'switch/clients/MORE_WORKS_RECEIVED';
+// const CLIENT_PAGE_SIZE_INCREMENTED = 'switch/clients/CLIENT_PAGE_SIZE_INCREMENTED';
+
+const defaultPageSize = 8;
+const incrementStepClientPageSize = defaultPageSize;
 
 let initialState = {
     clients: [] as Client[],
+
+    clientPageSize: defaultPageSize,
+
     isFetchingClients: true,
 }
 
@@ -26,7 +34,7 @@ const clientsReducer = (state = initialState, action: ActionTypes): InitialState
 const _clientsReceived = (state: InitialStateType, newClients: Client[]) => {
     return {
         ...state,
-        clients: [...newClients],
+        clients: [ ...state.clients ,...newClients],
     }
 }
 
@@ -47,7 +55,7 @@ export const getClients = (): ThunkType =>
     async (dispatch, getState) => {
         dispatch(clientsActions.isFetchingClientsChanged(true));
 
-        const payload = clientsAPI.getClients();
+        const payload = clientsAPI.getClients(0, defaultPageSize);
         dispatch(clientsActions.clientsReceived(payload))
 
         dispatch(clientsActions.isFetchingClientsChanged(false));
@@ -57,7 +65,7 @@ export const getAllClients = (): ThunkType =>
     async (dispatch, getState) => {
         dispatch(clientsActions.isFetchingClientsChanged(true));
 
-        const payload = clientsAPI.getAllClients();
+        const payload = clientsAPI.getClients(defaultPageSize);
         dispatch(clientsActions.clientsReceived(payload))
 
         dispatch(clientsActions.isFetchingClientsChanged(false));
