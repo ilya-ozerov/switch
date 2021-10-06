@@ -4,6 +4,7 @@ import {Item} from "./Item/Item";
 import {useDispatch, useSelector} from "react-redux";
 import {selectDesigns, selectIsAllWorks, selectPhotos, selectPrints} from "../../redux/worksSelectors";
 import {getMoreWorks, getWorks} from "../../redux/worksReducer";
+import {Image} from "antd";
 
 enum Switcher { Photography, Design, Print }
 
@@ -70,9 +71,11 @@ export const Works: React.FC = () => {
                     </div>
                 </div>
                 <div className="works__gallery">
-                    {switcher === Switcher.Photography && photosList}
-                    {switcher === Switcher.Design && designsList}
-                    {switcher === Switcher.Print && printsList}
+                    <Image.PreviewGroup>
+                        {switcher === Switcher.Photography && photosList}
+                        {switcher === Switcher.Design && designsList}
+                        {switcher === Switcher.Print && printsList}
+                    </Image.PreviewGroup>
                 </div>
             </div>
             {

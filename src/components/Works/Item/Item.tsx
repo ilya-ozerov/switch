@@ -1,5 +1,6 @@
 import React from 'react';
 import '../works.scss';
+import {ImageItem} from "../../common/Image/Image";
 
 type ItemProps = {
     imageUrl: string,
@@ -9,7 +10,7 @@ type ItemProps = {
 export const Item: React.FC<ItemProps> = ({imageUrl, imageAlt}) => {
     return (
         <div className="works__item">
-            <img src={imageUrl} alt={imageAlt}/>
+            <ImageItem src={imageUrl} alt={imageAlt}/>
         </div>
     );
 }
