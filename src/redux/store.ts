@@ -1,9 +1,11 @@
 import { createStore, applyMiddleware, combineReducers, compose } from "redux";
 import thunkMiddleware from "redux-thunk";
 import clientsReducer from "./clientsReducer";
+import worksReducer from "./worksReducer";
 
 let rootReducer = combineReducers({
     clientsSection: clientsReducer,
+    worksSection: worksReducer,
 });
 
 // @ts-ignore
