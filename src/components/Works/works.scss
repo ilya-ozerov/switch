@@ -98,14 +98,11 @@
   }
 
   &__item {
-    position: relative;
-    padding: 0px 0px 80% 0px;
     user-select: none;
+    width: 161px;
+    height: 161px;
 
     img {
-      position: absolute;
-      left: 0;
-      top: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
