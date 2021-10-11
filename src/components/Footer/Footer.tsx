@@ -37,7 +37,7 @@ export const Footer: React.FC = () => {
             </div>
 
             <div className="footer__author">
-                made with <HeartFilled /> by Krisna :)
+                Copyright 2021
             </div>
         </footer>
     );
