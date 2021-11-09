@@ -8,7 +8,7 @@
     position: relative;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 2;
-    color: #FFFFFF;
+    color: #ffffff;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -42,7 +42,7 @@
       text-align: center;
       font-weight: 700;
       font-size: 55pt;
-      color: #FFFFFF;
+      color: #ffffff;
 
       @media (max-width: 767px) {
         font-size: 30px;
@@ -53,16 +53,13 @@
   &__button {
     button {
       font-family: ProximaNova;
-      color: #FFFFFF;
+      color: #ffffff;
       text-transform: uppercase;
 
       width: 200px;
       height: 50px;
       line-height: 50px;
       font-size: 16px;
-
-      //font-size: 26px;
-      //padding: 16px 27px;
 
       background-color: $green-button-color;
       border-radius: 40px;
@@ -80,14 +77,13 @@
   }
 
   &__scroll {
-
     font-family: ProximaNova;
     font-size: 16px;
     width: 120px;
     height: 30px;
     border-radius: 15px;
     margin-bottom: 11px;
-    background-color: rgba(#FFFFFF, 0.7);
+    background-color: rgba(#ffffff, 0.7);
     padding: 7px 11px;
     color: #000000;
     position: relative;
@@ -98,16 +94,16 @@
     animation: scroll ease-in-out 1s infinite;
 
     &:hover {
-      background-color: rgba(#FFFFFF, 0.9);
+      background-color: rgba(#ffffff, 0.9);
     }
 
     &:active {
-      background-color: rgba(#FFFFFF, 1);
+      background-color: rgba(#ffffff, 1);
     }
 
     div {
       &:after {
-        content: '';
+        content: "";
         position: absolute;
         width: 8px;
         height: 11px;
@@ -120,7 +116,6 @@
 }
 
 .header {
-  //padding: 10px;
   width: 100%;
   height: 30px;
   display: grid;
@@ -148,7 +143,6 @@
 
     line-height: 150%;
 
-
     li {
       margin-right: 20px;
       position: relative;
@@ -157,20 +151,17 @@
       padding-top: 4px;
       user-select: none;
 
-
-
       &:last-child {
         margin: 0;
       }
 
       &:hover {
-
         &:after {
-          content: '';
+          content: "";
           position: absolute;
           height: 6px;
           width: 100%;
-          background-color: #54D154;
+          background-color: #54d154;
           top: 0;
           left: 0;
 
@@ -187,17 +178,14 @@
     font-size: 24px;
     font-family: NautilusPompilius;
     user-select: none;
-
   }
   &__input {
-
     justify-self: end;
 
     grid-area: search;
 
-    background-color: rgba(#FFFFFF, 0.8);
+    background-color: rgba(#ffffff, 0.8);
     border-radius: 20px;
-    //overflow: hidden;
     width: 180px;
     height: 30px;
 
@@ -208,7 +196,7 @@
     }
 
     &:focus-within {
-      box-shadow: 0px 0px 10px #54D154;
+      box-shadow: 0px 0px 10px #54d154;
     }
 
     input {
@@ -219,11 +207,12 @@
       width: 150px;
       height: 30px;
 
-      background-color: rgba(#FFFFFF, 0);
+      background-color: rgba(#ffffff, 0);
     }
   }
 
-  &__burger {}
+  &__burger {
+  }
 
   &__mobile {
     position: fixed;
@@ -233,11 +222,9 @@
     width: 100%;
     min-height: 100vh;
 
-    background-color: #54D154;
+    background-color: #54d154;
 
     padding: 10px;
-
-    //display: flex;
   }
 
   @media (max-width: 992px) {
@@ -252,76 +239,35 @@
         content: " ";
         height: 2px;
         width: 30px;
-        background-color: #FFFFFF;
+        background-color: #ffffff;
       }
       div {
         height: 2px;
         width: 30px;
-        background-color: #FFFFFF;
+        background-color: #ffffff;
       }
       &::after {
         content: " ";
         height: 2px;
         width: 30px;
-        background-color: #FFFFFF;
+        background-color: #ffffff;
       }
 
       &:hover {
-        transform: scale(1.1,1.1);
+        transform: scale(1.1, 1.1);
       }
     }
-    //&__cross {
-    //  width: 30px;
-    //  height: 30px;
-    //  position: relative;
-    //
-    //  transition-duration: 0.2s;
-    //
-    //  &:hover {
-    //    transform: scale(1.1,1.1);
-    //  }
-    //
-    //  &::before {
-    //    content: " ";
-    //    position: absolute;
-    //    left: 0;
-    //    top: 15px;
-    //    transform: rotate(45deg);
-    //    height: 2px;
-    //    width: 30px;
-    //    background-color: #FFFFFF;
-    //
-    //    animation: cross-left-line 0.2s linear;
-    //  }
-    //  &::after {
-    //    content: " ";
-    //    position: absolute;
-    //    left: 0;
-    //    top: 15px;
-    //    transform: rotate(-45deg);
-    //    height: 2px;
-    //    width: 30px;
-    //    background-color: #FFFFFF;
-    //
-    //    animation: cross-right-line 0.2s linear;
-    //  }
-    //}
   }
 }
 
 .mobile {
-
   display: grid;
   grid-template-rows: 30px 1fr;
   grid-template-columns: 30px 1fr;
 
   grid-template-areas:
-          "cross input"
-          "menu menu";
-
-  //gap: 50px;
-
-  //background-color: #3EBA3E;
+    "cross input"
+    "menu menu";
 
   &__cross {
     grid-area: cross;
@@ -332,7 +278,7 @@
     transition-duration: 0.2s;
 
     &:hover {
-      transform: scale(1.1,1.1);
+      transform: scale(1.1, 1.1);
     }
 
     &::before {
@@ -343,7 +289,7 @@
       transform: rotate(45deg);
       height: 2px;
       width: 30px;
-      background-color: #FFFFFF;
+      background-color: #ffffff;
 
       animation: cross-left-line 0.2s linear;
     }
@@ -355,16 +301,16 @@
       transform: rotate(-45deg);
       height: 2px;
       width: 30px;
-      background-color: #FFFFFF;
+      background-color: #ffffff;
 
       animation: cross-right-line 0.2s linear;
     }
   }
-  &__input  {
+  &__input {
     grid-area: input;
     justify-self: end;
 
-    background-color: rgba(#FFFFFF, 0.8);
+    background-color: rgba(#ffffff, 0.8);
     border-radius: 20px;
     overflow: hidden;
     width: 180px;
@@ -383,10 +329,10 @@
       width: 150px;
       height: 30px;
 
-      background-color: rgba(#FFFFFF, 0);
+      background-color: rgba(#ffffff, 0);
     }
   }
-  &__list  {
+  &__list {
     padding-top: 50px;
     grid-area: menu;
     justify-self: center;
@@ -408,7 +354,6 @@
       user-select: none;
       transition-duration: 0.5s;
 
-
       padding-top: 4px;
 
       &:last-child {
@@ -422,7 +367,6 @@
   }
 
   @media (max-width: 992px) {
-
   }
 }
 
