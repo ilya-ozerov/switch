@@ -207,7 +207,12 @@
       width: 150px;
       height: 30px;
 
+      color: #000000;
+
       background-color: rgba(#ffffff, 0);
+      &::placeholder {
+        color: rgba(#000000, 0.8);
+      }
     }
   }
 
